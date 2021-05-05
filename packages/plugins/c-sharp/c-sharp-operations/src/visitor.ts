@@ -541,6 +541,9 @@ ${this._getOperationMethod(node)}
   }
 
   public InputObjectTypeDefinition(node: InputObjectTypeDefinitionNode): string {
+    // DC: Rely on c-sharp plugin to generate the input object types
+    return '';
+
     if (!this.config.typesafeOperation) {
       return '';
     }
@@ -572,6 +575,9 @@ ${this._getOperationMethod(node)}
   }
 
   public EnumTypeDefinition(node: EnumTypeDefinitionNode): string {
+    // DC: Rely on c-sharp plugin to generate the enum types
+    return '';
+
     if (!this.config.typesafeOperation) {
       return '';
     }
