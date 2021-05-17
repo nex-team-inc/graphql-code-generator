@@ -90,6 +90,10 @@ export class CSharpResolversVisitor extends BaseVisitor<CSharpResolversPluginRaw
   }
 
   public wrapWithClass(content: string): string {
+    if (this.config.className.length === 0) {
+      // Bypass
+      return content;
+    }
     return new CSharpDeclarationBlock()
       .access('public')
       .asKind('class')
